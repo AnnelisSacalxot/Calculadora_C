@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+gcc menu.c -o menuFuncional
+./menuFuncional
+*/
+
 //declarando funcion
 void menu();
 void suma(double primerN,double segundoN);
@@ -32,9 +37,9 @@ void menu(){
         printf("4. Division \n");
         printf("5. Salir \n");
         scanf("%i", &operacion);
-        printf("Ingrese primer numero: \n");
+        printf("\n Ingrese primer numero: \n");
         scanf("%lf", &primerN);
-        printf("Ingrese segundo numero: \n");
+        printf("\n Ingrese segundo numero: \n");
         scanf("%lf", &segundoN);
 
 //condicional donde llamare mis funciones
@@ -78,8 +83,20 @@ void resta(double primerN,double segundoN){
 }
 
 void multiplicacion(double primerN,double segundoN){
-    double resultado = primerN + segundoN;
-   printf("El resultado de su calculo: %lf \n " , resultado);
+
+    double contador = 0;
+    double resultado;
+
+    for (contador; contador < segundoN; contador++)
+    {
+        /* code */
+        resultado = resultado + primerN;
+    }
+    
+
+    
+
+    printf("El resultado de su calculo: %lf \n " , resultado);
 
 }
 
